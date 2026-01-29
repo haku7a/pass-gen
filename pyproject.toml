@@ -6,3 +6,13 @@ requires-python = ">=3.12"
 dependencies = [
     "pyperclip>=1.11.0",
 ]
+
+[build-system]
+requires = ["maturin>=1.11.5,<2.0"]
+build-backend = "maturin"
+
+[tool.uv]
+cache-keys = [
+    { file = "Cargo.toml" },
+    { file = "src/**/*.rs" }
+]

@@ -1,8 +1,9 @@
+import _core
 import pyperclip
 
 
 def run():
-    text = "Hello, World!"
+    text = _core.generate_password()
     pyperclip.copy(text)
 
 
