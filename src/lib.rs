@@ -5,5 +5,6 @@ mod methods;
 #[pymodule]
 fn _core(m: &Bound<'_, PyModule>) -> PyResult<()> {
     m.add_function(wrap_pyfunction!(methods::generate_password, m)?)?;
+    m.add_function(wrap_pyfunction!(methods::generate_passphrase, m)?)?;
     Ok(())
 }
